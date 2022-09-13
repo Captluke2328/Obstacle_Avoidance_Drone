@@ -72,6 +72,7 @@ PITCH_FRONT = 1470-300;
 PITCH_FRONT = 1170; // This is the Pitch value that must be sent to the pixhawk when an object is detected at 20cm
 
 
-Below is schematic
+## Below is schematic
+
 <img width="551" alt="image" src="https://user-images.githubusercontent.com/81543946/189780058-f7fb02f8-76d8-4ceb-afd7-fa898446de15.png">
 
