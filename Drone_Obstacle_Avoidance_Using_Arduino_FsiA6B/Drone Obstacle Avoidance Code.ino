@@ -2,9 +2,11 @@
 #include<Servo.h>    //Download this library by going to <Tools> & then <Manage Libraries>
 #include <FastLED.h> //Download this library from github>/
 CRGB leds[1];
+
 Servo out1; //roll
 Servo out2; //pitch
 Servo out3; //throttle
+
 int trig1 = 2;
 int echo1 = 2;
 //int trig2 = A1;
@@ -17,13 +19,15 @@ int trig5 = 6;
 int echo5 = 6;
 int trig6 = 7;
 int echo6 = 7;
-int MAX_DISTANCE = 400;               
+int MAX_DISTANCE = 400;  
+
 NewPing sonar1(trig1,echo1,MAX_DISTANCE);
 //NewPing sonar2(trig2,echo2,MAX_DISTANCE);
 NewPing sonar3(trig3,echo3,MAX_DISTANCE);
 NewPing sonar4(trig4,echo4,MAX_DISTANCE);
 NewPing sonar5(trig5,echo5,MAX_DISTANCE);
 NewPing sonar6(trig6,echo6,MAX_DISTANCE);
+
 float dist1,dist2,dist3,dist4,dist5,dist6; 
 unsigned long counter_1, counter_2, counter_3, current_count;
 byte last_CH1_state, last_CH2_state, last_CH3_state;
@@ -37,13 +41,13 @@ int prev_time = 0;
 void setup(){    
  // Serial.begin(115200);
 FastLED.addLeds<WS2812, 3, GRB>(leds, 1);
-PCICR |= (1 << PCIE0);                                                   
+PCICR  |= (1 << PCIE0);                                                   
 PCMSK0 |= (1 << PCINT0);  
 PCMSK0 |= (1 << PCINT1);                                              
 PCMSK0 |= (1 << PCINT2);
-  out1.attach(13); //roll
-  out2.attach(11); //pitch
-  out3.attach(12); //throttle
+  out1.attach(13); //roll - Flight Controller
+  out2.attach(11); //pitch - Flight Controller
+  out3.attach(12); //throttle - Flight Controller
 pinMode(A0,INPUT);
 }
 
