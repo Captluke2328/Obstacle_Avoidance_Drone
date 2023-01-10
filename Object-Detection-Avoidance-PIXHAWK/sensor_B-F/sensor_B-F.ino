@@ -103,7 +103,7 @@ void SEND_DATA(int P) {
   mySerial.write(buf, len);
 }
 
-/*	mavlink_msg_rc_channels_override_pack(
+/* mavlink_msg_rc_channels_override_pack(
 		SYSTEMID,
 		COMPONENTID,
 		&message,
