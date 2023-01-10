@@ -102,3 +102,18 @@ void SEND_DATA(int P) {
       
   mySerial.write(buf, len);
 }
+
+/*	mavlink_msg_rc_channels_override_pack(
+		SYSTEMID,
+		COMPONENTID,
+		&message,
+		TARGET_SYSTEMID,
+		TARGET_COMPONENTID,
+		channelOne,
+		channelTwo,
+		channelThree,
+		channelFour,
+		channelFive,
+		channelSix,
+		channelSeven,
+		channelEight); */
